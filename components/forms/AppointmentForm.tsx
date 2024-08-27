@@ -184,6 +184,7 @@ export const AppointmentForm = ({
                 label="Appointment reason"
                 placeholder="Annual montly check-up"
                 disabled={type === "schedule"}
+                
               />
 
               <CustomFormField

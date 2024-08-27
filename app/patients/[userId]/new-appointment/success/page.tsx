@@ -41,10 +41,10 @@ const RequestSuccess = async ({
             Your <span className="text-green-500">appointment request</span> has
             been successfully submitted!
           </h2>
-          <p>We&apos;ll be in touch shortly to confirm.</p>
+          <p className="text-dark-700">We&apos;ll be in touch shortly to confirm.</p>
         </section>
 
-        <section className="request-details">
+        <section className="request-details text-dark-700">
           <p>Requested appointment details: </p>
           <div className="flex items-center gap-3">
             <Image
@@ -63,7 +63,7 @@ const RequestSuccess = async ({
               width={24}
               alt="calendar"
             />
-            <p> {formatDateTime(appointment.schedule).dateTime}</p>
+            <p > {formatDateTime(appointment.schedule).dateTime}</p>
           </div>
         </section>
 

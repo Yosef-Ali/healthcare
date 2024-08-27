@@ -8,6 +8,9 @@ const Register = async ({ params: { userId } }: SearchParamProps) => {
   const user = await getUser(userId);
   const patient = await getPatient(userId);
 
+  //console.log(user);
+  
+
   if (patient) redirect(`/patients/${userId}/new-appointment`);
 
   return (

@@ -30,6 +30,8 @@ const RegisterForm = ({ user }: { user: User }) => {
   const router = useRouter();
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log("user:", user);
+
   const form = useForm<z.infer<typeof PatientFormValidation>>({
     resolver: zodResolver(PatientFormValidation),
     defaultValues: {
@@ -86,6 +88,8 @@ const RegisterForm = ({ user }: { user: User }) => {
       };
 
       const newPatient = await registerPatient(patient);
+
+     
 
       if (newPatient) {
         router.push(`/patients/${user.$id}/new-appointment`);
@@ -152,6 +156,7 @@ const RegisterForm = ({ user }: { user: User }) => {
               control={form.control}
               name="birthDate"
               label="Date of birth"
+              
             />
 
             <CustomFormField
